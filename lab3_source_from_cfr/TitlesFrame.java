@@ -5,6 +5,9 @@ import java.awt.Component;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
+/**
+ * This class is designed for the installation of the window title.
+ */
 public class TitlesFrame
 extends JFrame {
     public TitlesFrame() {
@@ -19,6 +22,9 @@ extends JFrame {
         this.setLocationRelativeTo(null);
     }
 
+    /**
+     * The main function is triggered when the application starts.
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable(){
 

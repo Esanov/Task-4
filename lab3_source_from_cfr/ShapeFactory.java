@@ -12,6 +12,9 @@ import java.awt.geom.GeneralPath;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
+/**
+ * Class to put parameters of shape.
+ */
 public class ShapeFactory {
     public Shape shape;
     public BasicStroke stroke = new BasicStroke(3.0f);
@@ -19,6 +22,9 @@ public class ShapeFactory {
     public int width = 25;
     public int height = 25;
 
+    /**
+     * The function sets the type of shape and color.
+     */
     public ShapeFactory(int shape_type) {
         switch (shape_type / 10) {
             case 1: {
@@ -77,6 +83,9 @@ public class ShapeFactory {
         }
     }
 
+    /**
+     * The function sets the movement of the figure.
+     */
     private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
         double angle = 3.141592653589793 / (double)arms;
         GeneralPath path = new GeneralPath();

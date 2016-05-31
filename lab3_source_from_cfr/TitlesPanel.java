@@ -16,6 +16,9 @@ import java.awt.geom.AffineTransform;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+/**
+ * The class is designed to fit the title bar.
+ */
 public class TitlesPanel
 extends JPanel
 implements ActionListener {
@@ -25,6 +28,9 @@ implements ActionListener {
     private int start_angle = 0;
     private int shape;
 
+    /**
+     * Sets the title of the window.
+     */
     public TitlesPanel(int _shape) {
         this.shape = _shape;
         this.animation = new Timer(50, this);
@@ -33,12 +39,16 @@ implements ActionListener {
     }
 
     @Override
+    
     public void actionPerformed(ActionEvent arg0) {
         if (this.is_done) {
             this.repaint();
         }
     }
 
+    /**
+     * Performs drawing window ..
+     */
     private void doDrawing(Graphics g) {
         this.is_done = false;
         this.g2d = (Graphics2D)g;
@@ -72,6 +82,9 @@ implements ActionListener {
     }
 
     @Override
+    /**
+     * Painting the entire window.
+     */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         this.doDrawing(g);
